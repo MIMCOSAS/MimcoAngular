@@ -5,13 +5,15 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { CarrouselComponent } from './components/shared/carrousel/carrousel.component';
+import { AboutComponent } from './components/about/about.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    CarrouselComponent
+    CarrouselComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule
