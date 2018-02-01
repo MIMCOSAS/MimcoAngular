@@ -187,6 +187,20 @@ footer .glyphicon {
     color: #EFA42C;
 }
 
+.estado1 {
+    opacity: 0;
+}
+
+.estado2 {
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+.estado3 {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
 .slideanim {
     visibility: hidden;
 }
