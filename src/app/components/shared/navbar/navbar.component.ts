@@ -18,9 +18,11 @@ export class NavbarComponent implements OnInit {
 
   setClassanimacion() {
 
-    if (window.scrollY >= 100) {
+    if (window.scrollY >= 100 && !this.referenciaAlcanzada) {
       this.referenciaAlcanzada = true;
     }
-    this._servicioAnimaciones.imprimirAlgo();
+    if (this.referenciaAlcanzada) {
+      this._servicioAnimaciones.setThreeStateAnimationClass('navbar-brand', 'estado1', 'estado2', 'estado3' );
+    }
   }
 }

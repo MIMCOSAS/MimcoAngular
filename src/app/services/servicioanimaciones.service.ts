@@ -3,10 +3,10 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class ServicioanimacionesService {
 
-  constructor() { 
+  constructor() {
   }
 
-  imprimirAlgo(){
+  setThreeStateAnimationClass(clasePorDefecto: String, estadoinicial: String, primerestado: String, segundoestado: String ) {
     console.log('imprimir mierdas');
   }
 }
