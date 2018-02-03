@@ -9,12 +9,18 @@ import { ServicioanimacionesService } from '../../../services/servicioanimacione
 })
 export class NavbarComponent implements OnInit {
 
+  referenciaAlcanzada: Boolean = false;
+
   constructor( private _servicioAnimaciones: ServicioanimacionesService) { }
 
   ngOnInit() {
   }
 
-  test(){
+  setClassanimacion() {
+
+    if (window.scrollY >= 100) {
+      this.referenciaAlcanzada = true;
+    }
     this._servicioAnimaciones.imprimirAlgo();
   }
 }
