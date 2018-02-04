@@ -17,12 +17,12 @@ export class NavbarComponent implements OnInit {
   }
 
   setClassanimacion() {
-
+    let claseFinal: String;
     if (window.scrollY >= 100 && !this.referenciaAlcanzada) {
       this.referenciaAlcanzada = true;
     }
-    if (this.referenciaAlcanzada) {
-      this._servicioAnimaciones.setThreeStateAnimationClass('navbar-brand', 'estado1', 'estado2', 'estado3' );
-    }
+    claseFinal = this._servicioAnimaciones.setThreeStateAnimationClass(this.referenciaAlcanzada,
+    100, 'navbar-brand', 'estado1', 'estado2', 'estado3');
+    return claseFinal;
   }
 }

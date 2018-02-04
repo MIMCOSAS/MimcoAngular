@@ -6,7 +6,15 @@ export class ServicioanimacionesService {
   constructor() {
   }
 
-  setThreeStateAnimationClass(clasePorDefecto: String, estadoinicial: String, primerestado: String, segundoestado: String ) {
-    console.log('imprimir mierdas');
+  setThreeStateAnimationClass(triggerRef:Boolean, windowPosYRef: Number, claseEstatica: String, iniEstado: String, primEstado: String, segEstado: String ) {
+    if (triggerRef) {
+      if (window.scrollY > windowPosYRef) {
+        return claseEstatica + " " + primEstado;
+      }else {
+        return claseEstatica + " " + segEstado;
+      }
+    } else {
+      return claseEstatica + " " + iniEstado;
+    }
   }
 }
