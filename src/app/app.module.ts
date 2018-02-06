@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+//Services
+import { ServicioanimacionesService } from './services/servicioanimaciones.service';
+
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
@@ -26,7 +29,9 @@ import { ContactenosComponent } from './components/shared/contactenos/contacteno
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [
+    ServicioanimacionesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
