@@ -2,8 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 //Services
-import { ServicioanimacionesService } from './services/servicioanimaciones.service';
+//import { ServicioanimacionesService } from './services/servicioanimaciones.service';
 
+//Components
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
@@ -13,6 +14,7 @@ import { MimcoserviciosComponent } from './components/mimcoservicios/mimcoservic
 import { NuestrosclientesComponent } from './components/nuestrosclientes/nuestrosclientes.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { ContactenosComponent } from './components/shared/contactenos/contactenos.component';
+import { ScrollAnimationDirective } from './Directives/scroll-animation.directive';
 
 
 @NgModule({
@@ -24,13 +26,14 @@ import { ContactenosComponent } from './components/shared/contactenos/contacteno
     MimcoserviciosComponent,
     NuestrosclientesComponent,
     FooterComponent,
-    ContactenosComponent
+    ContactenosComponent,
+    ScrollAnimationDirective
   ],
   imports: [
     BrowserModule
   ],
   providers: [
-    ServicioanimacionesService
+
   ],
   bootstrap: [AppComponent]
 })

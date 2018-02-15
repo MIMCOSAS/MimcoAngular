@@ -1,28 +1,24 @@
-import { Component, OnInit } from '@angular/core';
-import { ServicioanimacionesService } from '../../../services/servicioanimaciones.service';
-
+import { Component, Input, OnChanges, OnInit, SimpleChanges, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent implements OnInit, OnChanges {
 
-  referenciaAlcanzada: Boolean = false;
-
-  constructor( private _servicioAnimaciones: ServicioanimacionesService) { }
+  //@Input('scrollYNav') scrollYPosition: number;
+  //@ViewChild('navbarBrand') myNavBar: any;
+  constructor() { }
 
   ngOnInit() {
+    //console.log(this.scrollYPosition);
   }
 
-  setClassanimacion() {
-    let claseFinal: String;
-    if (window.scrollY >= 100 && !this.referenciaAlcanzada) {
-      this.referenciaAlcanzada = true;
-    }
-    claseFinal = this._servicioAnimaciones.setThreeStateAnimationClass(this.referenciaAlcanzada,
-    100, 'navbar-brand', 'estado1', 'estado2', 'estado3');
-    return claseFinal;
+  ngOnChanges(changes: SimpleChanges) {
+    //Called before any other lifecycle hook. Use it to inject dependencies, but avoid any serious work here.
+    //Add '${implements OnChanges}' to the class.
+    //console.log(changes);
+    //console.log(this.myNavBar);
   }
 }

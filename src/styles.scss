@@ -187,21 +187,18 @@ footer .glyphicon {
     color: #EFA42C;
 }
 
-.estado1 {
-    opacity: 0;
-}
-
-.estado2 {
+.fade-in {
     opacity: 1;
-    transition: opacity 2s;
+    transition: opacity 300ms ease-in;
 }
 
-.estado3 {
+.fade-out {
     opacity: 0;
-    transition: opacity 2s;
+    transition: opacity 300ms ease-in;
 }
 
-.slideanim {
+
+/*.slideanim {
     visibility: hidden;
 }
 
@@ -211,9 +208,10 @@ footer .glyphicon {
     animation-duration: 1s;
     -webkit-animation-duration: 1s;
     visibility: visible;
-}
+}*/
 
-@keyframes slide {
+
+/*@keyframes slide {
     0% {
         opacity: 0;
         transform: translateY(70%);
@@ -233,7 +231,7 @@ footer .glyphicon {
         opacity: 1;
         -webkit-transform: translateY(0%);
     }
-}
+}*/
 
 @media screen and (max-width: 768px) {
     .col-sm-4 {
