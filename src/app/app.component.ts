@@ -7,13 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
 
-  //scrollYPosition: number;
-  constructor(){
-    /*window.addEventListener('scroll', ()=>{
-      this.scrollYPosition = window.scrollY;
-    });*/
+  constructor() {
   }
-  ngOnInit(){
-    //this.scrollYPosition = window.scrollY;
+  ngOnInit() {
+    // this.scrollYPosition = window.scrollY;
   }
 }

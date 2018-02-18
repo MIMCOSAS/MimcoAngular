@@ -15,7 +15,7 @@
 <div class="container-fluid bg-grey">
     <div class="row">
         <div class="col-sm-4">
-            <span class="glyphicon glyphicon-ok-circle logo slideanim"></span>
+            <span *ngIf="showCircleGlyp" class="glyphicon glyphicon-ok-circle logo slideanim" @fade></span>
         </div>
         <div class="col-sm-8">
             <h2>Nuestros valores</h2><br>

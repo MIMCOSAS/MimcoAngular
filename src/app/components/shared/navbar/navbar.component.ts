@@ -1,24 +1,26 @@
-import { Component, Input, OnChanges, OnInit, SimpleChanges, ViewChild } from '@angular/core';
+import { fade } from '../../../animaciones/fadeanimation';
+import { Component, HostListener, Input, OnInit} from '@angular/core';
+import { ServicioanimacionesService } from '../../../services/servicioanimaciones.service';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
+  styleUrls: ['./navbar.component.scss'],
+  animations: [
+    fade
+  ]
 })
-export class NavbarComponent implements OnInit, OnChanges {
-
-  //@Input('scrollYNav') scrollYPosition: number;
-  //@ViewChild('navbarBrand') myNavBar: any;
-  constructor() { }
-
-  ngOnInit() {
-    //console.log(this.scrollYPosition);
+export class NavbarComponent implements OnInit {
+  // propiedades del componente
+  showNavBrand: Boolean = false;
+  // EventListeners del componente
+  @HostListener('window:scroll') onWindowScroll() {
+    this.showNavBrand = this._servicioAnimaciones.HideShowWindowScrollY(200);
+  }
+  // Constructor y funciones del componente
+  constructor(private _servicioAnimaciones: ServicioanimacionesService) {
   }
 
-  ngOnChanges(changes: SimpleChanges) {
-    //Called before any other lifecycle hook. Use it to inject dependencies, but avoid any serious work here.
-    //Add '${implements OnChanges}' to the class.
-    //console.log(changes);
-    //console.log(this.myNavBar);
+  ngOnInit() {
   }
 }
