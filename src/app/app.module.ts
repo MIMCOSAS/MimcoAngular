@@ -1,9 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-//Services
-import { ServicioanimacionesService } from './services/servicioanimaciones.service';
+ // Services
+ import { ServicioanimacionesService } from './services/servicioanimaciones.service';
 
+// Components
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
@@ -24,10 +26,11 @@ import { ContactenosComponent } from './components/shared/contactenos/contacteno
     MimcoserviciosComponent,
     NuestrosclientesComponent,
     FooterComponent,
-    ContactenosComponent
+    ContactenosComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule
   ],
   providers: [
     ServicioanimacionesService

@@ -4,17 +4,9 @@ import { Injectable } from '@angular/core';
 export class ServicioanimacionesService {
 
   constructor() {
+    console.log('Servicio Listo');
   }
-
-  setThreeStateAnimationClass(triggerRef:Boolean, windowPosYRef: Number, claseEstatica: String, iniEstado: String, primEstado: String, segEstado: String ) {
-    if (triggerRef) {
-      if (window.scrollY > windowPosYRef) {
-        return claseEstatica + " " + primEstado;
-      }else {
-        return claseEstatica + " " + segEstado;
-      }
-    } else {
-      return claseEstatica + " " + iniEstado;
-    }
+  HideShowWindowScrollY(positionYRef: number) {
+    return window.scrollY < positionYRef ? false : true;
   }
 }
